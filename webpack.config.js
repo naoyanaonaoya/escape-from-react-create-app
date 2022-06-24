@@ -21,7 +21,7 @@ module.exports = {
       {
         // typescriptのLoader
         // testは正規表現で拡張子を書く
-        test: /\.(ts|tsx)$/,
+        test: /\.(ts|tsx|jsx|js)$/,
         // testに対して何を使うか
         // 下から順番に実行される
         use: [
@@ -36,7 +36,9 @@ module.exports = {
             },
           },
         ],
-        test: /\.scss$/,
+      },
+      {
+        test: /\.(css|scss)$/,
         use: [
           {
             loader: "style-loader",
